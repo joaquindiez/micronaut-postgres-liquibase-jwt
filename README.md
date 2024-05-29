@@ -17,6 +17,7 @@ docker run -d -t -i \
 
 ## Build and run App
 
-  ./gradlew build
+   ./gradlew build
+
 
   ./gradlew run  -t
