@@ -17,7 +17,44 @@ docker run -d -t -i \
 
 ## Build and run App
 
+```
    ./gradlew build
+```
 
-
+```
   ./gradlew run  -t
+```
+
+
+## Test endpoint
+
+
+Test Health EndPoint
+
+
+```
+  curl http://locahost:8080/health
+```
+
+Test Demo EndPoint
+
+
+```
+  curl http://locahost:8080/demo
+```
+
+
+Test Beans EndPoint
+
+
+```
+  curl http://locahost:8080/beans
+```
+
+
+Test Routes EndPoint
+
+
+```
+  curl http://locahost:8080/routes
+```
