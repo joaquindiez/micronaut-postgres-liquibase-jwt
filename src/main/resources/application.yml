@@ -24,7 +24,7 @@ micronaut:
         access: isAnonymous()
       - pattern: /beans/**
         access: isAnonymous()
-      - pattern: /info/**
+      - pattern: /openapi-explorer/**
         access: isAnonymous()
   router:
     static-resources:

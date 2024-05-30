@@ -15,6 +15,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     ksp("io.micronaut:micronaut-http-validation")
     ksp("io.micronaut.openapi:micronaut-openapi")
@@ -30,6 +31,7 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("net.datafaker:datafaker:2.2.2")
     compileOnly("io.micronaut:micronaut-http-client")
     compileOnly("io.micronaut.openapi:micronaut-openapi-annotations")
     runtimeOnly("ch.qos.logback:logback-classic")
@@ -42,6 +44,7 @@ dependencies {
     testImplementation("org.testcontainers:testcontainers")
     aotPlugins platform("io.micronaut.platform:micronaut-platform:4.4.3")
     aotPlugins("io.micronaut.security:micronaut-security-aot")
+
 }
 
 
@@ -76,6 +79,3 @@ micronaut {
         configurationProperties.put("micronaut.security.jwks.enabled","false")
     }
 }
-
-
-
