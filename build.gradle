@@ -1,5 +1,6 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.23"
+    id("org.jetbrains.kotlin.kapt") version "1.9.23"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.9.23"
     id("org.jetbrains.kotlin.plugin.jpa") version "1.9.23"
     id("com.google.devtools.ksp") version "1.9.23-1.0.19"
@@ -77,5 +78,11 @@ micronaut {
         optimizeNetty = true
         replaceLogbackXml = true
         configurationProperties.put("micronaut.security.jwks.enabled","false")
+    }
+}
+
+kapt {
+    arguments {
+        arg("micronaut.openapi.project.dir", projectDir.toString())
     }
 }
